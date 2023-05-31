@@ -2,9 +2,9 @@ autoload -Uz log_debug log_error log_info log_status log_output
 
 ## Dependency Information
 local name='carla'
-local version='2.6.0-a1'
+local version='2.6.0-alpha1'
 local url='https://github.com/falkTX/Carla.git'
-local hash='2d1b96372300639ac2059fe083a6d95d97760369'
+local hash='d0893860898de8cac3c58d67a7a2f8d132844e6f'
 
 ## Build Steps
 setup() {

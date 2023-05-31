@@ -2,7 +2,7 @@ param(
     [string] $Name = 'carla',
     [string] $Version = '2.6.0-alpha1',
     [string] $Uri = 'https://github.com/falkTX/Carla.git',
-    [string] $Hash = 'd0893860898de8cac3c58d67a7a2f8d132844e6f'
+    [string] $Hash = 'f11c6785a369adee5d50bae316ccafc78f03c343'
 )
 
 function Setup {

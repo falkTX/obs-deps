@@ -85,9 +85,9 @@ package() {
   if [[ ${PACKAGE_NAME} != 'qt'* ]] {
     log_status "Cleanup unnecessary files"
 
-    rm -rf lib/^(*.dylib|libajantv*|*.a|*.so*|*.lib|*.framework|*.dSYM|cmake)(N)
+    rm -rf lib/^(*.dylib|libajantv*|*.a|*.so*|*.lib|*.framework|*.dSYM|carla|cmake)(N)
     rm -rf lib/(libpcre*|libpng*)(N)
-    rm -rf bin/^(*.exe|*.dll|*.pdb|swig)(N)
+    rm -rf bin/^(*.exe|*.dll|*.pdb|carla-*|swig)(N)
 
     if [[ -f bin/swig ]] {
       swig_lib=(share/swig/*(/))

@@ -29,6 +29,7 @@ config() {
 
   args=(
     ${cmake_flags}
+    -DCARLA_BUILD_FRAMEWORKS=ON
     -DCARLA_USE_JACK=OFF
     -DCARLA_USE_OSC=OFF
   )

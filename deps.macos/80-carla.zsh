@@ -4,7 +4,7 @@ autoload -Uz log_debug log_error log_info log_status log_output
 local name='carla'
 local version='2.6.0-alpha1'
 local url='https://github.com/falkTX/Carla.git'
-local hash='6b85836ff9d9af5609981755925769b475634ca1'
+local hash='31f9a6eef93f205a97deafd251dc4dcb6f5bf5c9'
 
 ## Build Steps
 setup() {
@@ -29,7 +29,7 @@ config() {
 
   args=(
     ${cmake_flags}
-    -DCARLA_BUILD_FRAMEWORKS=ON
+    -DCARLA_BUILD_FRAMEWORKS=TRUE
     -DCARLA_USE_JACK=OFF
     -DCARLA_USE_OSC=OFF
   )

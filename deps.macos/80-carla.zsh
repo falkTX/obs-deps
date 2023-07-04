@@ -63,3 +63,14 @@ install() {
   cd "${dir}"
   progress cmake ${args}
 }
+
+fixup() {
+  cd "${dir}"
+
+  log_info "Fixup (%F{3}${target}%f)"
+  case ${target} {
+    macos*)
+      rm -r "${target_config[output_dir]}"/lib/carla-standalone.framework
+      ;;
+  }
+}

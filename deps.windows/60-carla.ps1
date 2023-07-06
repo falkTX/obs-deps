@@ -62,3 +62,11 @@ function Install {
 
     Invoke-External cmake @Options
 }
+
+function Fixup {
+    Log-Information "Fixup (${Target})"
+    Set-Location $Path
+
+    Remove-Item -ErrorAction 'SilentlyContinue' "$($ConfigData.OutputPath)/bin/libcarla_standalone2.dll"
+    Remove-Item -ErrorAction 'SilentlyContinue' "$($ConfigData.OutputPath)/lib/carla/libcarla_standalone2.lib"
+}

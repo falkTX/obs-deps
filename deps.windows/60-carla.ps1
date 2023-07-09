@@ -2,7 +2,7 @@ param(
     [string] $Name = 'carla',
     [string] $Version = '2.6.0-alpha1',
     [string] $Uri = 'https://github.com/falkTX/Carla.git',
-    [string] $Hash = '2f503d70cb0321bfa440c313435ceaa40bfe04b0'
+    [string] $Hash = '2a70bb2ff4855ec28dabbb0e485f07d97a7f90fb'
 )
 
 function Setup {
@@ -67,6 +67,9 @@ function Fixup {
     Log-Information "Fixup (${Target})"
     Set-Location $Path
 
+    Remove-Item -ErrorAction 'SilentlyContinue' "$($ConfigData.OutputPath)/bin/libcarla_native-plugin.dll"
     Remove-Item -ErrorAction 'SilentlyContinue' "$($ConfigData.OutputPath)/bin/libcarla_standalone2.dll"
-    Remove-Item -ErrorAction 'SilentlyContinue' "$($ConfigData.OutputPath)/lib/carla/libcarla_standalone2.lib"
+
+    Remove-Item -ErrorAction 'SilentlyContinue' "$($ConfigData.OutputPath)/lib/libcarla_native-plugin.lib"
+    Remove-Item -ErrorAction 'SilentlyContinue' "$($ConfigData.OutputPath)/lib/libcarla_standalone2.lib"
 }

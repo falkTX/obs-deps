@@ -4,7 +4,7 @@ autoload -Uz log_debug log_error log_info log_status log_output
 local name='carla'
 local version='2.6.0-alpha1'
 local url='https://github.com/falkTX/Carla.git'
-local hash='2f503d70cb0321bfa440c313435ceaa40bfe04b0'
+local hash='2a70bb2ff4855ec28dabbb0e485f07d97a7f90fb'
 
 ## Build Steps
 setup() {
@@ -70,6 +70,8 @@ fixup() {
   log_info "Fixup (%F{3}${target}%f)"
   case ${target} {
     macos*)
+      rm -r "${target_config[output_dir]}"/include
+      rm -r "${target_config[output_dir]}"/lib/carla-native-plugin.framework
       rm -r "${target_config[output_dir]}"/lib/carla-standalone.framework
       ;;
   }

@@ -4,7 +4,7 @@ autoload -Uz log_debug log_error log_info log_status log_output
 local name='carla'
 local version='2.6.0-alpha1'
 local url='https://github.com/falkTX/Carla.git'
-local hash='cd4556c6dfc59807f316021f3359ff22e0dd8406'
+local hash='b4f5eaac40bdeed064335c02fa4d16ce7fc4a67d'
 
 ## Build Steps
 setup() {
